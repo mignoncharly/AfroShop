@@ -1,0 +1,237 @@
+
+
+body {
+  background-image: url("img/bg.jpg");
+  background-attachment: fixed;
+  background-size: 100%;
+  margin-top: 5rem;
+
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  .bg-steel {
+    background-color: #414141;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  /****************************************************************************/
+  
+  /***********CONTENT-ARTICLE-SHOPS***************************************************/
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  
+  .article-title {
+    color: #444444;
+  }
+  
+  a.article-title:hover {
+    color: #444444;
+    text-decoration: none;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
+/****************************************************************************/
+
+/*****FOOTER**************************************************************/
+#footer_2{
+  background: rgb(189, 187, 187);
+
+}
+
+/****************************************************************************/
+
+/***************FORM - SEARCH***********************************************/
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  /*******************************************************************************/
+
+  /************************ Layout_index.html*************************************/
+  .wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+  }
+
+  .push {
+    clear: both;
+    height: 4em;
+  }
+
+  .intro-header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background-image: url("img/bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+.intro-message {
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.intro-message > h1 {
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  font-size: 5em;
+}
+
+.intro-message > h3 {
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+
+/*******About Page*****************************************************************/
+
+
+.team1 {
+  padding: 30px;
+  background-color: #f8f8f8;
+  width: 400px;
+  display: table;
+}
+
+
+#mission h4 {
+  text-align:center; 
+}
+
+#about h4 {
+  text-align:center; 
+}
+
+#para h3 {
+  text-align:center; 
+}
+
+
+.img {
+  vertical-align: middle;
+  display: table-cell;
+  margin-right: 1em;
+  border-radius: 50%;
+  width: 200px;
+}
+
+#text-me {
+  vertical-align: middle;
+  display: table-cell;
+  width: 200px;
+}
+
+
+.box{
+  height: auto;
+  line-height: 5px;
+  text-align: center;
+  border-radius: 15px; 
+  border: 1px #414141;
+  background-color: rgb(235, 228, 228);
+  opacity: 0.5;
+
+ }
+  
+ #box-2 {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+ }
+
+ .box h1, h3{
+  color: black;
+ }
+
+
+
+ .from_form{
+  position: relative;
+  left: 500px;
+ }

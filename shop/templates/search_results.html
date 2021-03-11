@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <p class="article-content"><p><h5>Results found for: {{user_input.capitalize()}} </h5></p>
+      <p></p> <form>
+        <input type="button" value="Go Back" onclick="history.go(-1)">
+      </form>
+      </p>
+    </div>
+  </div>
+</article>
+
+{% for result in results %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <h5><a class="mr-2" href="#"> {{ result.name }}</a></h5>
+    </div>
+    <p class="article-content"><p>Description: </p>{{ result.description }}</p>
+    <p class="article-content"><p>Address: {{ result.address }}</p>
+    <p class="article-content"><p>Phone Number: {{ result.phone }}</p>
+  </div>
+</article>
+{% endfor %}
+
+<p></p> <form>
+  <input type="button" value="Go Back" onclick="history.go(-1)">
+</form>
+</p>
+{% endblock content %}

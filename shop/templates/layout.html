@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    {% if title %}
+        <title>AfroShopMe - {{ title }}</title>
+    {% else %}
+        <title>AfroShopMe</title>
+    {% endif %}
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="{{ url_for('index') }}">AfroShopMe</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{{ url_for('home') }}">Shops</a>
+              <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+              <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+        </div>
+        <div class="col-md-4">
+          <div class="content-section">
+            <h3>What's Up!</h3>
+            <p class='text-muted'>updates coming
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-light"> <a class="nav-item nav-link"href="#">Latest Posts</a></li>
+                <li class="list-group-item list-group-item-light"> <a class="nav-item nav-link"href="#">Announcements</a></li>
+                <li class="list-group-item list-group-item-light"> <a class="nav-item nav-link"href="#">Map</a></li>
+                <li class="list-group-item list-group-item-light"> <a class="nav-item nav-link"href="#">etc</a></li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4" id="footer_2">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4"><a href ="#" style="text-decoration: none">AfroShopMe</h5></a>
+        <p>Listing all the Shops in Germany first then ...</p>
+        <p>The next Amazon for AfroShops in Germany!</p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p></p>
+              <a href="{{ url_for('about') }}" style="text-decoration: none">ABOUT US</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!" style="text-decoration: none">BLOG</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>Kernerweg 2</p>
+            <p>74376 Gemmrigheim</p>
+            <p>Germany</p>
+          </li>
+        </ul>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p><a type="button" class="btn-floating btn-fb" href="https://www.facebook.com/profile.php?id=100007026348089" target="_blank" style="text-decoration: none"><i class="fab fa-facebook-f"></i>Facebook</a> </p>
+            <p><a type="button" class="btn-floating btn-tw" href="https://twitter.com/Von_Den_Green" target="_blank" style="text-decoration: none"><i class="fab fa-twitter"></i>Twitter</a></p>
+          </li>
+        </ul>
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Copyright mignoncharly © 2020</div>
+  <!-- Copyright -->
+
+</footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

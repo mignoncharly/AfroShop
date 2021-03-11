@@ -1,0 +1,25 @@
+
+{% extends "layout_index.html" %}
+{% block title %}Welcome{% endblock %}
+{% block body %}
+<div class="intro-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="intro-message">
+                            <div class="box">
+                                <span id="box-2">
+                                    <a class="nav-item nav-link" href="{{ url_for('home') }}">
+                                        <p><h1>Welcome To AfroShopMe</h1></p>
+                                        <hr class="intro-divider">
+                                        <p><h3>Find Your AfroShop And More...</h3></p>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+</div>
+{% endblock %}

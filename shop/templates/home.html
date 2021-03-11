@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <p class="article-content"><p><h5>You can search for a Shop by entering a Name | City | State | Zip_Code </h5></p>
+    </div>
+
+    <p class="article-content"> 
+      <div class="form_form">
+      <form class="form" method="post" action="/search">
+        <label for="user_input"></label>
+        <input id="user_input" name="user_input" type="text">
+        <input type = "submit" value = "Go!">
+      </form>  
+    </div>   
+    </p>
+  </div>
+</article>
+
+{% for shop in shops %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <h5><a class="mr-2" href="#">{{ shop.name }}</a></h5>
+    </div>
+    <p class="article-content"><p>Description: </p>{{ shop.description }}</p>
+    <p class="article-content"><p>Address: {{ shop.address }}</p>
+    <p class="article-content"><p>Phone Number: {{ shop.phone }}</p>
+  </div>
+</article>
+{% endfor %}
+{% endblock content %}
+
+
+
